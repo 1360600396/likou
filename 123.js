@@ -11,7 +11,7 @@ const vaild=(s)=>{
 
   }
 
-
+//回文串  
   let i=0
   let j=s.length
   while(i<j&&s[i]==s[j]){
