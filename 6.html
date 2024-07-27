@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 500px;
+      height: 500px;
+      background-color: black;
+      position: relative;
+      margin: 0 auto;
+    }
+    .box2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: all .3s;
+    }
+    .box2:hover{
+        background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <box1 class="box2"></box1>
+  </div>
+</body>
+</html>

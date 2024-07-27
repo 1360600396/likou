@@ -10,3 +10,12 @@ for(let i=0;i<length;i++){
    object[a]=b
 }
 console.log(object)
+
+
+let object1={}
+let arr3=(url.split('?')[1]).split('&')
+for(let item of arr3){
+    let[a,b]=item.split('=')
+    object1[a]=b
+}
+console.log(object1)

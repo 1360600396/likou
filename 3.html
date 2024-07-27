@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul li:nth-child(2n) {
+        color: red;
+      }
+      div.box::before {
+        content: "zxb";
+        color: black;
+      }
+
+      .box2 {
+        width: 400px;
+        height: 400px;
+        /* background-color: red; */
+        margin-left: 100px;
+        /* padding-left: 200px; */
+        /* box-sizing: border-box; */
+        border: 1px solid black;
+
+      }
+      .box21 {
+        float: left;
+        width: 200px;
+        height: 400px;
+        background-color: blue;
+      }
+      .box3 {
+        float: left;
+        /* display: inline-block; */
+        /* margin: 0 auto; */
+        margin-left: 50px;
+        /* line-height: 400px; */
+        /* width: 200px; */
+        height: 400px;
+        width: 150px;
+        /* background-color: pink; */
+        display: flex;
+      }
+      .box4 {
+        width: 200px;
+        height: 80px;
+        background-color: yellow;
+        border-radius: 40px;
+        box-shadow: 2px 3px 10px 0 red inset;
+      }
+      .box3>ul>li {
+        background-color: pink;
+     width: 50px;
+     height: 200px;
+     justify-content: space-between;
+     align-items: center;
+          list-style: none;
+      }
+      ul {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box">123</div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul> -->
+
+    <div class="box2">
+      <div class="box21"></div>
+      <div class="box3">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box4"></div>
+  </body>
+</html>
