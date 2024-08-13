@@ -31,15 +31,15 @@ const array = [
   // }
 
   // // 思路先过滤出父节点，然后使用map遍历，如果子节点有值就给父节点添加一个child属性，最后返回
-  // function arrtotree1(array1,id=0){
-  // return array1.filter(item=>item.parentId==id).map(item=>{
-  //   let child=arrtotree1(array1,item.id)
-  //   if(child.length>0){
-  //     item.child=child
-  //   }
-  //   return item
-  // })
-  // }
+  function arrtotree1(array1,id=0){
+  return array1.filter(item=>item.parentId==id).map(item=>{
+    let child=arrtotree1(array1,item.id)
+    if(child.length>0){
+      item.child=child
+    }
+    return item
+  })
+  }
 
 
 
@@ -58,7 +58,7 @@ const numbertotree=(arr,id=0)=>{
   })
 }
 
-console.log(numbertotree(array,0))
+// console.log(numbertotree(array,0))
 
 
 const arraytotree=(array,id=0)=>{
@@ -70,4 +70,20 @@ const arraytotree=(array,id=0)=>{
       return item
     })
 }
+// let a1=arraytotree(array)
+// console.log(arraytotree(array),a1[0].child)
 
+
+
+let arrtotree=(array,id=0)=>{
+   return array.filter((item)=>item.parentId==id).map((item)=>{
+    let child=arrtotree(array,item.id)
+    if(child.length>0){
+      item.child=child
+    }
+   
+    return item
+   })
+}
+
+console.log(arrtotree(array))

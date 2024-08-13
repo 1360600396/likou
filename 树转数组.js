@@ -94,7 +94,7 @@ function treeToArray2(node,parentId=null){
   })
   return res
 }
-console.log(treeToArray2(tree,0))
+// console.log(treeToArray2(tree,0))
 
 
 
@@ -102,8 +102,40 @@ const treeToArr =(tree,parent=0)=>{
   let res=[]
   res.push({id:tree.id,name:tree.name,parent})
   tree.children.forEach(item=>{
-    res=res.concat(treeToArr(tree,item.id))
+    res.push(...treeToArr(item,item.id))
 
   })
   return res
 }
+
+
+
+
+// let treetoarr=(tree)=>{
+//   console.log(tree)
+//   return  tree.reduce((prev,cur)=>{
+//     if(!cur.children){
+//        prev.push(cur)
+//     }else{
+//       let tree1=treetoarr(cur.children)
+//       delete cur.children
+//       prev.push(cur,...tree1)
+//     }
+//     return prev
+//   },[])
+// }
+
+console.log(treeToArr(tree,0))
+
+
+
+let treetoarr1=(tree,parentId=0)=>{
+  let res=[]
+  res.push({id:tree.id,name:tree.name,parentId})
+  tree.children.forEach((item)=>{
+    res.push(...treetoarr1(item,tree.id))
+  })
+  return res
+}
+
+console.log(treetoarr1(tree))

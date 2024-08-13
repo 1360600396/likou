@@ -84,3 +84,39 @@ function flat12(arr){
 
  }
  console.log(flat12(array))
+
+
+
+ function flat12(arr){
+  let arr1=[]
+  arr.forEach((item)=>{
+      if(Array.isArray(item)){
+        arr1.push(...flat12(item))
+      }else{
+        arr1.push(item)
+      }
+  })
+  return arr1
+ }
+ 
+
+ function flat13(arr){
+  return arr.reduce((prev,cur)=>{
+    return prev.concat(Array.isArray(cur)?flat13(cur):cur)
+     
+  },[])
+ }
+ console.log(flat14(array))
+
+
+ function flat14(arr){
+  let arr1=[]
+    arr.map((item)=>{
+      if(Array.isArray(item)){
+        arr1=arr1.concat(flat12(item))
+      }else{
+        arr1.push(item)
+      }
+    })
+    return arr1
+ }

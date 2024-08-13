@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box1 {
+        width: 100%;
+        height: 1000px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .box2 {
+        width: 200px;
+        background-color: red;
+      }
+      .box3 {
+        /* background-color: pink;
+      margin-left: 300px;
+      flex: 1; */
+        width: 500px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </div>
+    <script>
+      let a1 = new Promise((reject) => {
+        reject("123");
+      });
+
+      let a2 = new Promise((reject) => {
+        reject("1234");
+      });
+
+      // console.log("123123");
+        console.log(a1)
+      console.log(Promise.all([a1, a2]));
+    </script>
+  </body>
+</html>
