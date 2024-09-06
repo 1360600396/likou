@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PerformanceObserver Example</title>
+</head>
+<body>
+  <script>
+    function longRunningTask() {
+      const start = performance.now();
+      while (performance.now() - start < 200) { // Simulate a long task
+        // Busy loop for 200ms
+      }
+    }
+
+    // Initialize PerformanceObserver
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Long Task Entry:', entry);
+        if (entry.attribution) {
+          entry.attribution.forEach((attrib) => {
+            console.log('Attribution Details:', attrib);
+          });
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['longtask'] });
+
+    // Trigger a long task
+    setTimeout(() => {
+      longRunningTask();
+    }, 100);
+  </script>
+</body>
+</html>

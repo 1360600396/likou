@@ -2168,34 +2168,428 @@ let obj ={
 // }
 
 
-class event{
-    constructor(){
+// class event{
+//     constructor(){
 
-    }
-    #obj={}
-    on(event,fun){
-        if(!this.#obj[event]){
-            this.#obj[event]=[]
-        }
-        this.#obj[event].push(fun)
-    }
-    once(event,fun){
-        this.on(event,(...args)=>{
-            fun(...args)
-            this.delete(event)  
-        })
-    }
-    delete(event){
-        delete this.#obj[event]
-    }
-}
-class explale {
-    static #obj=null 
-    #explace(){
-        if(explale.#obj==null){
-            explale.#obj= new explale
+//     }
+//     #obj={}
+//     on(event,fun){
+//         if(!this.#obj[event]){
+//             this.#obj[event]=[]
+//         }
+//         this.#obj[event].push(fun)
+//     }
+//     once(event,fun){
+//         this.on(event,(...args)=>{
+//             fun(...args)
+//             this.delete(event)  
+//         })
+//     }
+//     delete(event){
+//         delete this.#obj[event]
+//     }
+// }
+// class explale {
+//     static #obj=null 
+//     #explace(){
+//         if(explale.#obj==null){
+//             explale.#obj= new explale
             
-        }  7
-        return explale.#obj
-    }
+//         }  7
+//         return explale.#obj
+//     }
+// }
+
+// let num=[100,4,200,1,3,2]
+// function sort1(arr){
+//         let max=-1000
+//     let map=new Map()
+//     arr.sort((a,b)=>a-b)
+//     for(let item of arr){
+//         map.set(item,map.get(item-1)+1||1)
+//     }
+//     for(let item of map){
+//        max= Math.max(item[1],max)
+//     }
+//     return max
+// }
+// console.log(sort1(num))
+
+
+// function node1(pre,ino){
+//     let node=new Listnode(0)
+//     node.val=pre[0]
+//    let index= ino.findindex((item)=>item==node.val)
+//    node.left=node1(pre.slice(1,index+1),ino.slice(0,mid))
+//    node.right=node1(pre.slice(index+1,pre.length),ino.slice(mid+1,pre.length))
+//     return node
+// }
+
+// let nums=[1,2,3]
+// function num1(nums){
+//     let res=[]
+//     let path=[]
+//     function husu(index,nums){
+//         path.push([...res])
+//         if(index>=nums.length){
+//             return
+//         }
+//         for(let i=index;i<nums.length;i++){
+//             res.push(nums[i])
+//             husu(i+1,nums)
+//             res.pop()
+//         }
+//     }
+//     husu(0,nums)
+//     return path
+// }
+// console.log(num1(nums))
+
+// let nums1=[1,2,3]
+// function sort2(nums){
+//     let res=[]
+//     let path=[]
+//     function sort3(nums,arr){
+//         if(path.length==3){
+//             res.push([...path])
+//             return
+//         }
+//         for(let i=0;i<nums.length;i++){
+//             if(arr[i]==true)continue
+//             path.push(nums[i])
+//             arr[i]=true
+//             sort3(nums,arr)
+//             path.pop()
+//             arr[i]=false
+//         }
+//     }
+//     sort3(nums,[])
+//     return res
+
+// }
+// console.log(sort2(nums1))
+
+// let p1=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve(1)
+//     },1000)
+// })
+// let p2=p1.then((res)=>{
+//     return  new Promise((resolve,reject)=>{
+//         console.log(1)
+//         setTimeout((res)=>{
+//             resolve(1)
+//         },1000)
+    
+//     })
+// })
+// p2.then(res=>{
+//     console.log(res)
+// })
+// function instanceof1(obj,fun){
+//     if(!(obj||['object','function'].includes(typeof obj))){
+//         return false
+//     }
+//    let obj1= Object.getPrototypeOf(obj)
+//     if(fun.prototype==obj1){
+//       return true
+//     }else if(obj1==null){
+//       return false
+//     }else{
+//       instanceof1(obj1,fun)
+//     }
+//   }
+//   let arr=new Array(3).fill(3)
+  
+//   console.log(instanceof1(arr,Array),arr instanceof Array)
+
+// function settime(time,fun){
+//     let timer=null
+//     function set(){
+//       timer=  setTimeout(()=>{
+//             fun()
+//             set()
+//         },time)
+//     }
+//     set(time,fun)
+//     return ()=>{clearTimeout(timer)}
+// }
+
+// settime(1000,()=>{console.log("123")})
+// let arr=[1,2,2,3]
+// function flat(arr){
+//     return arr.filter((item,index)=>{ return arr.indexOf(item)==index})
+// }
+// console.log(flat(arr))
+
+// function quchong(arr){
+//     let res=[]
+//     for(let i=0;i<arr.length;i++){
+//         if(!res.includes(arr[i])){
+//             res.push(arr[i])
+//         }
+//     }
+//     return res
+// }
+// console.log(quchong(arr))
+
+//   function settime(time,fun){
+//     let timer=null
+//    timer= setInterval(()=>{
+//     fun()
+//     clearInterval(timer)
+//     },time)
+//   }
+//   settime(1000,()=>{console.log("123")})
+// let obj1={
+//     a:12323,
+//     b:234
+// }
+// Function.prototype.call1=function(obj,...args){
+//         let a=Symbol()
+//         obj[a]=this
+//         let res=obj[a](...args)
+//         delete obj[a]
+//         return res
+// }
+// function hehei(name){
+//     console.log(this.a,name)
+// }
+// hehei.call1(obj1,"123")
+
+
+// Promise.all1=function(arr1){
+//     let index=0
+//     let arr=[]
+//    return new Promise((resolve,reject)=>{
+//         arr1.forEach((item,index)=>{
+//             Promise.resolve(item).then((res)=>{
+//                reject()
+//             }).catch(()=>{reject()})
+//         })
+//     })
+// }
+
+// let p1=new Promise((resolve)=>{resolve(1)})
+// let p2=new Promise((resolve)=>{resolve(2)})
+// let p3=new Promise((resolve)=>{resolve(3)})
+// let arr1=[p1,p2,p3]
+
+// Promise.all1(arr1).then((res)=>{console.log(res)})
+
+
+// function trim(s){
+//     return s.replace(/^\s+|\s+$/,'')
+// }
+// function trim1(s){
+//     return s.replace(/^\s+(.*?)\s+$/,'$1')
+// }
+
+// console.log(trim("   asdasd  "))
+
+// function split1(s){
+//    return  s.replace(/(?=(\d{4})+$)/g,'-')
+// }
+// console.log(split1("18379802267"))
+// function func(name){
+//     this.name=name
+// }
+
+// function new1(fun){
+   
+//     let obj={}
+//     obj._proto__=fun.prototype
+//     let obj2=fun.call(obj,"123")
+//     if(typeof obj2=='object'||typeof obj2=='function'){
+//         return obj2
+//     }else{
+//        return  obj
+//     }
+// }
+
+// console.log(new1(func))
+let obj2={
+    a:3,
+    b:4
 }
+// function clone(obj){
+//    let newobj= Array.isArray(obj)?[]:{}
+//    for(let k in obj){
+//     if(typeof obj[k]=='object'){
+//         newobj[k]=clone(obj[k])
+//     }else{
+//         newobj[k]=obj[k]
+//     }
+
+//    }
+//    return newobj
+// }
+// let a1=clone(obj2)
+// a1.a=5
+// console.log(a1,obj2)
+
+// function form(s){
+//     return s.replace(/(?=(\d{4})+$)/g,'.')
+// }
+// console.log(form("123456789"))
+
+// let obj3={
+//     a:3,
+//     b:4
+// }
+// function create(obj){
+//     let newobj={
+//     }
+//     newobj._proto__=obj
+//     return newobj
+// }
+// console.log(create(obj3)._proto__.a)
+
+// class sheler {
+//     runcount=0
+//     axm=3
+//     constructor(){
+//         this.list=[]
+//     }
+//     add(fun){
+//         this.list.push(fun)
+//         this.run()
+//     }
+//     run(){
+//         if(this.list.length&&runcount<max){
+//             this.runcount++
+//             let list1=this.list.shift()
+//             list1().then(()=>{
+//                 this.runcount--
+//                 this.run()
+//             })
+//         }
+//     }
+// }
+
+// function get(object){
+//     let s=Object.prototype.toString.call(object)
+//     return s.replace(/\[object (.*?)\]/g,'$1')
+
+// }
+// console.log(get([1,2,3]))
+// class fabu{
+//     constructor(){
+//         this.obj={}
+//     }
+//     on(event,fun){
+//         if(!this.obj[event]){
+//             this.obj[event]=[]
+//         }
+//         this.obj[event].push(fun)
+//     }
+//     delete(event){
+//         delete this.obj[event]
+//     }
+//     once(event,fun){
+//         this.on(event,()=>{
+//             fun()
+//             this.delete(event)
+//         })
+
+//     }
+//     emit(event){
+//         this.obj[event].forEach((item)=>{
+//             item()
+//         })
+//     }
+// }
+
+// function fangdou(fun){
+//     let timer=null
+//     return function(){
+//         if(!timer)clearTimeout(timer)
+//       timer=  setTimeout(()=>{
+//             fun()
+//         },1000)
+//     }
+// }
+
+// function jieliu(fun){
+//     let timer=null
+//     return function(){
+//         if(!timer){
+//           timer=  setTimeout(()=>{
+//                 fun()
+//                 timer=null
+//             })
+//         }
+//     }
+// }
+
+// let res=[]
+// function dfs(root){
+//     if(!root)return
+//     dfs(root.left)
+//     res.push(root.val)
+//     dfs(root.right)
+// }
+
+// 输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+// 输出：[1,2,2,3,5,6]
+// 示例 2：
+
+// let nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+// function merge(nums1,m,nums2,n){
+//      nums1.splice(nums1.length-m,n,...nums2)
+//      return nums1.sort((a,b)=>a-b)
+// }
+// console.log(merge(nums1,m,nums2,n))
+// let nums = [0,1,2,2,3,4,4]
+
+// nums=nums.filter((item,index)=>nums.indexOf(item)==index)
+// console.log(nums)
+
+// let nums1 = [1,2,2,1], nums2 = [2,2]
+
+
+
+// let k=[2,5,3,4,20],n=2
+// function dele(arr,n){
+//   let count=0
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=1;j<arr.length;j++){
+//         let arr1=[...arr]
+//       arr1.splice(i,j)
+//       let sum=arr1.reduce((prev,cur)=>prev*cur,1)
+//       if(sum%n*10==0){
+//         count++
+//       }
+//     }
+//   }
+//   return count
+// }
+// console.log(dele(k))
+
+
+const rl = require("readline").createInterface({ input: process.stdin });
+var iter = rl[Symbol.asyncIterator]();
+const readline = async () => (await iter.next()).value;
+
+void async function () {
+    let [m,n] = (await readline()).trim().split(' ').map(Number);
+    let arr = (await readline()).trim().split(' ').map(Number);
+
+    function dele(arr,n){
+        let count=0
+        for(let i=0;i<arr.length;i++){
+          for(let j=1;j<arr.length;j++){
+              let arr1=[...arr]
+            arr1.splice(i,j)
+            let sum=arr1.reduce((prev,cur)=>prev*cur,1)
+            if(sum%(Math.pow(10,n))==0){
+              count++
+            }
+          }
+        }
+        return count
+      }
+      console.log(dele(arr, n));
+      rl.close();
+}();
+

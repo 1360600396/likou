@@ -75,15 +75,17 @@ const arraytotree=(array,id=0)=>{
 
 
 
-let arrtotree=(array,id=0)=>{
-   return array.filter((item)=>item.parentId==id).map((item)=>{
-    let child=arrtotree(array,item.id)
-    if(child.length>0){
-      item.child=child
-    }
+// let arrtotree=(array,id=0)=>{
+//    return array.filter((item)=>item.parentId==id).map((item)=>{
+//     let child=arrtotree(array,item.id)
+//     if(child.length>0){
+//       item.child=child
+//     }
    
-    return item
-   })
-}
+//     return item
+//    })
+// }
 
-console.log(arrtotree(array))
+// console.log(arrtotree(array))
+
+
