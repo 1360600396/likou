@@ -544,5 +544,115 @@ for(let item of res){
     }
 }
 // console.log(1,map.size)
-console.log(1,map.size)
+// console.log(1,map.size)
 
+
+// function cnode(val,left,right){
+//   this.val=val
+//   this.left=left
+//   this.right=right
+// }
+// let node=new cnode(0,null,null)
+// let left=new cnode(1,null,null)
+// let right=new cnode(2,null,null)
+// let left1=new cnode(1,null,null)
+// let right1=new cnode(2,null,null)
+// let left2=new cnode(1,null,null)
+// let right2=new cnode(2,null,null)
+// node.left=left
+// node.right=right
+// left.left=left1
+// left.right=right1
+// right.left=left2
+// right.right=right2
+
+// let map1=new Map()
+// function dfs(root){
+//   if(!root)return root
+  
+//   if(!root.left&&!root.right){
+//     map1.set(0,map1.get(0)+1||1)
+//   }else if(root.left&&root.right){
+//     map1.set(2,map1.get(2)+1||1)
+//   }else {
+//     map1.set(1,map1.get(1)+1||1)
+//   }
+//   if(root.left)dfs(root.left)
+//     if(root.right)dfs(root.right)
+//       // return map
+// }
+// dfs(node)
+// let arr12=Array.from(map1)
+// function sum(n){
+//   let sum=0
+//   for(let i=0;i<n;i++){
+//     sum+=i
+//   }
+//   return sum
+// }
+// let res1= arr12.map((item)=>sum(item[1])).reduce((prev,cur)=>prev+cur,0)
+// console.log(res1)
+
+// let arr2=[{a:123},{b:234}]
+
+// let obj={}
+// arr2.forEach((item)=>{
+//   for(let key in item){
+
+//     obj[key]=item[key]
+//   }
+// })
+// console.log(obj)
+
+// for(let i=2;i<=32;i++){
+//    let res=Math.random()*(2+30+1)
+//    console.log(res)}
+
+
+let arr4=[5,6,7,8,1,2,3,4]
+function find1(){
+  let left=0,right=arr4.length-1
+  if(arr4[left]<arr4[right]){
+    return 0
+  }
+  while(left<right){
+    let mid=Math.floor((left+right)/2) 
+    if(arr4[mid]>arr4[mid+1])return mid+1
+    if(arr4[left]<arr[mid]){
+      left=mid+1
+    }else{
+      right=mid-1
+    }
+  }
+
+  return 0
+
+}
+
+// console.log(find1(arr4))
+
+// let a={
+// abc:function(){
+//   console.log("123")
+// },
+// CDE(){
+//   console.log("asdasd")
+// }
+// }
+// a.CDE()
+// console.log(a.abc())
+let p2=new Promise((resolve)=>{
+  console.log(1)
+  resolve(3)
+  console.log(2)
+})
+
+setTimeout(()=>{
+  console.log(10)
+},0)
+
+p2.then((res)=>{
+  console.log(res)
+})
+
+console.log(4)
