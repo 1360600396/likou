@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>requestAnimationFrame Example</title>
+  <style>
+    #box {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      position: absolute;
+      top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <script>
+    // 获取方块元素
+    const box = document.getElementById('box');
+
+    // 动画初始时间和速度
+    let startTime = null;
+    const speed = 100; // 像素/秒
+
+    function animate(timestamp) {
+      if (!startTime) startTime = timestamp; // 记录动画开始时间
+      
+      // 计算经过的时间
+      const elapsedTime = timestamp - startTime;
+      
+      // 更新方块的位置
+      const position = (elapsedTime / 1000) * speed; // 计算当前位置
+      
+      // 将方块的左边距更新到新位置
+      box.style.left = `${position}px`;
+
+      // 如果方块尚未到达视口的右边界，则继续请求下一帧
+      if (position < window.innerWidth) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    // 启动动画
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>

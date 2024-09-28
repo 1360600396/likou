@@ -30,10 +30,61 @@
   </style>
 </head>
 <body>
+
   <div class="box">
     <div class="box1"></div>
     <div class="box2"></div>
     <div class="box3"></div>
   </div>
+  <script>
+    // 等待页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM Content Loaded');
+
+  // 监听 FP（First Paint）
+  if ('PerformancePaintTiming' in window) {
+    const paintEntries = performance.getEntriesByType('paint');
+    console.log('Paint entries:', paintEntries);
+    const firstPaint = paintEntries.find(entry => entry.name === 'first-paint');
+    if (firstPaint) {
+      console.log('FP:', firstPaint.startTime);
+    } else {
+      console.log('First Paint not available');
+    }
+  } else {
+    console.log('PerformancePaintTiming not supported');
+  }
+
+  // 监听 FCP（First Contentful Paint）
+  if ('PerformancePaintTiming' in window) {
+    const firstContentfulPaint = performance.getEntriesByType('paint').find(entry => entry.name === 'first-contentful-paint');
+    if (firstContentfulPaint) {
+      console.log('FCP:', firstContentfulPaint.startTime);
+    } else {
+      console.log('First Contentful Paint not available');
+    }
+  }
+
+  // 监听 LCP（Largest Contentful Paint）
+  if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      console.log('LCP entries:', entries);
+      const lcpEntry = entries.find(entry => entry.entryType === 'largest-contentful-paint');
+      if (lcpEntry) {
+        console.log('LCP:', lcpEntry.startTime);
+      } else {
+        console.log('Largest Contentful Paint not available');
+      }
+    });
+
+    observer.observe({ type: 'largest-contentful-paint', buffered: true });
+  } else {
+    console.log('PerformanceObserver not supported');
+  }
+});
+
+    
+      </script>
 </body>
 </html>

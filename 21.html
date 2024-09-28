@@ -38,19 +38,40 @@
 
       // console.log(Promise.myall(ab))
 
-      let a1 = new Promise((resolve) => {
-        resolve("123");
-      });
+      // let a1 = new Promise((resolve) => {
+      //   resolve("123");
+      // });
 
-      let a2 = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          reject("2234");
-        }, 1000);
-      });
+      // let a2 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     reject("2234");
+      //   }, 1000);
+      // });
 
-      let arr = [a2, a2];
+      // let arr = [a2, a2];
 
-      console.log(Promise.allSettled(arr));
+      // console.log(Promise.allSettled(arr));
+     function checkForMeaningfulPaint(){
+      console.log("123")
+     }
+      requestAnimationFrame(checkForMeaningfulPaint);
+      
     </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        div {
+          color: red;
+        }
+      </style>
+    </head>
+    <body>
+        <div>123123</div>
+    </body>
+    </html>
   </body>
 </html>

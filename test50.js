@@ -641,18 +641,134 @@ function find1(){
 // }
 // a.CDE()
 // console.log(a.abc())
-let p2=new Promise((resolve)=>{
-  console.log(1)
-  resolve(3)
-  console.log(2)
-})
+// let p2=new Promise((resolve)=>{
+//   console.log(1)
+//   resolve(3)
+//   console.log(2)
+// })
 
-setTimeout(()=>{
-  console.log(10)
-},0)
+// setTimeout(()=>{
+//   console.log(10)
+// },0)
 
-p2.then((res)=>{
-  console.log(res)
-})
+// p2.then((res)=>{
+//   console.log(res)
+// })
 
-console.log(4)
+// console.log(4)
+
+// function dfs(arr){
+//   let left=0,right=arr.length-1
+//   if(arr[left]<arr[right])return 0
+//   while(left<right){
+//     let mid=Math.floor((left+right)/2)
+//     if(arr[mid]<arr[mid+1])return mid+1
+//     if(arr[mid]<arr[left])right=mid-1
+//     else left=mid+1
+//   }
+//   return 0
+
+// }
+
+// class set1 {
+//   constructor(){
+//     this.set1={}
+//   }
+//   set(key,value){
+   
+//     this.set1[key]=value
+//   }
+//   get(key){
+//     return this.set1[key]
+//   }
+//   size(){
+//     let object=this.set1
+//     let count=0
+//     for(let value in object){
+//       count++
+//     }
+//     return count
+//   }
+//   has(key){
+//       return this.set1[key]?true:false
+//   }
+
+// }
+
+// let set1=new Set([1,2,3])
+// console.log(set1.entries().next().value)
+
+// function setkey(key,value,time){
+//   let obj={
+//     value:value,
+//     time:new Date().getTime()
+//   }
+//   localStorage.setItem(key,JSON.stringify(obj))
+// }
+
+// function getTime(key){
+//   let value=localStorage.getItem(key)
+//   value=JSON.parse(value)
+//   if(value.time-new Date()>0){
+//     return value
+//   }else{
+//     localStorage.removeItem(key)
+//   }
+
+// }
+
+// function dfs(fn){
+//   let timer=null
+//   return function(){
+//     return timer?timer:timer=fn().finally(timer=null)
+//   }
+// }
+
+// let a=0
+// function promise1(){
+//   return new Promise((resolve)=>{
+//     setTimeout(()=>{
+//       resolve(a++)
+//     },1000)
+//   })
+// }
+
+// function kelihua(n){
+//   let arr12=[]
+// function keli(...args){
+//   arr12.push(...args)
+//   if(arr12.length>=n){
+//     return arr12.reduce((prev,cur)=>cur+prev,0)
+
+//   }else{
+//     return keli
+//   }
+
+// }
+// return keli
+// }
+
+
+// function replace(s){
+//   s=Object.prototype.toString.call(s)
+//   return s.replace(/\[object (.*?)\]/,'$1').toLowerCase()
+// }
+// console.log(replace([1,2,3]))
+
+function split(s){
+  return s.replace(/(?=(\d{4})+$)/g,'-')
+}
+
+console.log(split('123456789'))
+
+function compose(...fn){
+  return function dfs(args){
+      for(let i=0;i<fn.length;i++){
+        args=fn[i](args)
+      }
+      return args
+  }
+  
+}
+
+new RegExp()
