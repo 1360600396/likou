@@ -39,7 +39,7 @@ Array.prototype.map2 = function (callback) {
   
   this.forEach((cur, index, array) => {
     result.push(callback(cur, index, array));
-  });
+  })
   
   return result;
 };
@@ -181,20 +181,23 @@ console.log(Array.from(arrayLikeObj))
 
 
 const render = (template, data) => {
-  return template.replace(/{{\s*?(\w+)\s*?}}/g, (match, key) => {
-    return key && data.hasOwnProperty(key) ? data[ key ] : ''
-  })
-}
+  let result = template;
+  for (const key in data) {
+    result = result.split(`{{ ${key} }}`).join(data[key]);
+  }
+  return result;
+};
 
 const data = {
   name: '前端胖头鱼',
   age: 100
-}
+};
 const template = `
   我是: {{ name }}
-  年龄是: {{age}}
-`
-console.log(render(template, data))
+  年龄是: {{ age }}
+`;
+console.log(render(template, data));
+
 
 
 
@@ -558,6 +561,7 @@ const instanceOf1 = (obj, func) => {
   
   let proto = Object.getPrototypeOf(obj)
 
+
   if (proto === func.prototype) {
     return true
   } else if (proto === null) {
@@ -590,6 +594,7 @@ console.log(splitMobile2(18379876545))
 String.prototype.strim1 = function () {
   return this.replace(/^\s+|\s+$/g, '')
 }
+
 String.prototype.strim2 = function () {
   return this.replace(/^\s+(.*?)\s+$/, '$1')
 }
@@ -625,4 +630,47 @@ function fn4(x) { return x + 4; }
 
 // 使用 compose
 const a = compose(fn1, fn2, fn3, fn4);
-console.log(a(1)); // 11
+console.log(a(1)); // 11 
+
+
+
+
+function isEqual(obj1, obj2) {
+  // 检查是否为相同的引用
+  if (obj1 === obj2) return true;
+
+  // 检查是否为对象
+  if (typeof obj1 !== 'object' || obj1 === null || typeof obj2 !== 'object' || obj2 === null) {
+      return false;
+  }
+
+  // 获取对象的属性键
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  // 比较属性数量
+  if (keys1.length !== keys2.length) return false;
+
+  // 逐个比较属性
+  for (let key of keys1) {
+      if (!keys2.includes(key) || !isEqual(obj1[key], obj2[key])) {
+          return false
+      }
+  }
+
+  return true;
+}
+
+// 示例用法
+const objA = { a: 1, b: { c: 2 } };
+const objB = { a: 1, b: { c: 2 } };
+const objC = { a: 1, b: { c: 3 } };
+
+console.log(isEqual(objA, objB)); // true
+console.log(isEqual(objA, objC)); // false
+
+
+console.log(deepEqual(objA, objB)); // true
+console.log(deepEqual(objA, objC)); // false 
+
+
