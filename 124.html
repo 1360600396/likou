@@ -36,5 +36,33 @@
   <div>
     <p>123</p>
   </div>
+  <script>
+  
+      console.log("1223123")
+    let storage1={
+  fish:'now',
+  setitem(key,value,time){
+     key=`${this.fish}${key}`
+     time=time?new Date(time).getTime():Date.now()+365*1000
+    window.localStorage.setItem(key,JSON.stringify({time,key}))
+  },
+  getItemAlign(key){
+     key=`${this.fish}${key}`
+   let value= window.localStorage.getItem(key)
+   console.log("value")
+   value=JSON.parse(value)
+   if(value.time>Date.now()){
+    console.log(value.time)
+    return value.key
+   }
+ localStorage.removeItem(key)
+
+  }
+}
+
+storage1.setitem(1,"zxb")
+console.log("123")
+storage1.getItemAlign("1")
+  </script>
 </body>
 </html>

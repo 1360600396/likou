@@ -178,8 +178,6 @@ console.log(Array.from(arrayLikeObj))
 
 
 
-
-
 const render = (template, data) => {
   let result = template;
   for (const key in data) {
@@ -433,10 +431,6 @@ const compareMoreVersion = (versions) => {
 }
 
 console.log(compareMoreVersion(['1.0', '3.1', '1.01']))
-
-
-
-
 
 
 

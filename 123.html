@@ -4,8 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    /* 定义动画 */
+@keyframes example {
+  0% { background-color: red; transform: translateX(0); }
+  25%{background-color: orange; transform: translateX(50px);}
+  50% { background-color: yellow; transform: translateX(100px); }
+  100% { background-color: blue; transform: translateX(0); }
+}
+
+/* 应用动画到元素 */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: example 2s infinite; /* 动画名称、持续时间和循环次数 */
+}
+
+  </style>
 </head>
 <body>
+  <div class="box"></div>
   <h1>忆江南</h1>
   <p>唐.白居易<br><br>江南好，风景旧曾谙。(2)日出江花红胜火，春来江水绿如蓝，(3)能不忆江南</p>
   <h2>作者介绍</h2>
@@ -15,5 +34,31 @@
   <p>(1)据《乐府杂录》，此词又名《谢秋娘》，系唐李德裕为亡姬谢秋娘作。又名(3)蓝:蓝草，其叶可制青绿染料。</p>
   <h4>品评</h4>
   <p>此词写江南春色，首句“江南好”，以一个既浅切又圆活的“好”字，摄尽江南此，此句又已暗逗结句“能不忆江南”，并与之相关阖。次句“风景旧曾谙”又照应了“忆”字，不失为勾通一篇意脉的精彩笔墨。三、四两句对江南之“好同色间的相互烘托，又有异色间的相互映衬，充分显示了作者善于著色的技巧。深长的韵味，把读者带入余情摇漾的境界中。</p>
+<script>
+  let storage1={
+  fish:'now',
+  setitem(key,value,time){
+     key=`${this.fish}${key}`
+     time=time?new Date(time).getTime():Date.now()+365*1000
+    window.localStorage.setItem(key,JSON.stringify({time,value}))
+  },
+  getItemAlign(key){
+     key=`${this.fish}${key}`
+   let value= window.localStorage.getItem(key)
+   console.log("value")
+   value=JSON.parse(value)
+   if(value.time>Date.now()){
+    console.log(value.value)
+    return value.key
+   }
+ localStorage.removeItem(key)
+
+  }
+}
+
+storage1.setitem(1,"zxb")
+console.log("123")
+storage1.getItemAlign("1")
+</script>
 </body>
 </html>

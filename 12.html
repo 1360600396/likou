@@ -1,45 +1,783 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    .box {
-      height: 500px;
-      width: 100%;
-      /* display: flex; */
-      position: relative;
-    }
-    /* .box .box2 {
-      width: 200px;
-      background-color: red;
-    }
-    .box .box3 {
-      flex: 1;
-      margin-left: 100px;
-      background-color: pink;
-    } */
-    .box .box2 {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 200px;
-      height: 100%;
-      background-color: red;
-    }
-    .box .box3 {
-      margin-left: 300px;
-      width: 100%;
-      height: 100%;
-      background-color: yellow;
-    }
-  </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="装修管理软件,装饰管理软件,家装管理软件,装修预算软件,云立方,云装天下" />
+    <meta name="description" content="装修管理软件哪家好,云立方云装天下家装管理软件是众多装饰行业都在用的高人气家家装erp管理软件!办公管理系统、装饰装修家装ERP+APP管理系统、装饰装修公司预算管理、装修项目施工管理、装修CRM营销管理、装修流程管理。让家装工装管理更简单!" />
+    <meta name="360-site-verification" content="6dd28826d2a6cc530d3e216c44146dfa" />
+    <meta name="sogou_site_verification" content="TqF2AQysWZ" />
+    <meta name="sogou_site_verification" content="0xio2RwkVb" />
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="/Themes/Home/Default/Public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Themes/Home/Default/Public/css/yzh.css" />
+    <script src="/Public/js/jquery.min.js"></script>
+    <script src="/Themes/Home/Default/Public/js/jquery.SuperSlide.2.1.1.js"></script>
+    
+    <title>装修管理软件-家装管理软件-装饰公司erp管理系-云立方云装天下家装装修管理软件-深圳市云立方网络有限公司网站</title>   
+    <script src="/js/uaredirect.js" type="text/JavaScript"></script> 
+    <script>
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]); return null;
+        }
+        //alert(GetQueryString("from"));
+        //if(window.location.href!='http://www.cloudcubic.net/contact_us.html'&&GetQueryString("from")!="pc")uaredirect("https://www.cloudcubic.net/m");
+
+        function setCookie(name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+
+        if (GetQueryString("from") != "pc" && getCookie("cloudcubic") == null) {
+
+            uaredirect("/m");
+
+        }
+        else {
+            setCookie("cloudcubic", "gopc");
+        }
+    </script>
+    <!-- cloudcubic.net Baidu tongji analytics -->
 </head>
-<body>
-  <div class="box">
-    <div class="box2"></div>
-    <div class="box3"></div>
-  </div>
+<body >
+    <!-- 头部 -->
+    <div class="header grWidth">
+        <h1 class="logo fl"><a href="/"><img src="/Uploads/201601/56a08cac5171c.jpg" alt="logo" title="专业装企管理软件提供商-云立方网络" /></a></h1>
+        <h2 class="logo fl"><a href="/"><img src="/uploads/description.jpg" alt="让管理，更简单" title="家装管理软件专家-云立方ERP" /></a></h2>
+        <div class="nav fr">
+            <ul>
+                <li><a href="/" class="current" >首页</a></li>
+                <li><a href="/cloudcubic.html" >方案</a></li><li><a href="/support.html" >支持</a></li><li><a href="/case.html" >案例</a></li><li><a href="/about.html" >关于</a></li>                <li><a href="javascript:showDiv()"><span style="color:white">试用</span><p style="background-color: #049ddc;width: 47px;height: 27px;position: absolute;top: 51px;z-index: -1;border-radius: 3px;margin-left: -8px;"></p></a></li>
+                <li><a href="/m">手机网</a></li>
+            </ul>
+        </div>
+    </div>
+        <!-- 广告轮播图 -->
+<div class="banner">
+    <ul class="bd">
+                    <li><a href="javascript:showDiv()"><img src="/Uploads/202207/62e232ec355f9.jpg" alt="免费账号限时体验" width="1920" height="462" /></a></li>
+                    <li><a href="https://www.cloudcubic.net/company_news/24-2244.html"><img src="/Uploads/202401/65b208f475b29.jpg" alt="2023生态大会" width="1920" height="462" /></a></li>
+                    <li><a href="javascript:showDiv()"><img src="/Uploads/202401/65b1dd7977efe.png" alt="4G智能工地监控系统" width="1920" height="462" /></a></li>
+                    <li><a href="javascript:showDiv()"><img src="/Uploads/202007/5efd508cdea9a.jpg" alt="装修公司管理软件" width="1920" height="462" /></a></li>
+                    <li><a href="javascript:showDiv()"><img src="/Uploads/202004/5ea531736ecac.jpg" alt="工装信息化协同" width="1920" height="462" /></a></li>
+            </ul>
+    <div class="banner_ctr">
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+    </div>
+    <ul class="hd">
+	    	      <li class="on"></li>
+	    	      <li ></li>
+	    	      <li ></li>
+	    	      <li ></li>
+	    	      <li ></li>
+	        </ul>
+	<script type="text/javascript">
+    	/*鼠标移过，左右按钮显示*/
+    	jQuery(".banner").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+    	/*SuperSlide图片切换*/
+       jQuery(".banner").slide({ titCell:".hd li",mainCell:".bd", effect:"leftLoop",autoPlay:true,easing:"easeOutCirc",interTime:6000});
+	</script>
+</div>
+
+    
+    
+<div class="solution">
+    <h2 class="homeTitle"><strong>家装解决方案</strong>solution</h2>
+    <div class="solutionMain grWidth">
+        <ul>
+            <li>
+                <div class="s_1"><img src="/Themes/Home/Default/Public/images/solution1.jpg" alt="云装天下家装ERP软件管理系统"><span><h1>云装天下ERP</h1>16年装饰行业管理经验凝聚而成，覆盖整个装饰企业全部核心业务流程，高效解决了企业流程管理、销售管理、客户关系管理、协同沟通管理、可视化施工管理、财务管理、物流供应链管理、渠道管理等各大模块的管理需求，全面满足装饰企业信息化建设的需求，是国内最专业的装饰企业ERP管理软件。目前，云装天下ERP全面打通PC电脑端、手机APP及微信端，打破企业内外信息孤岛，极大的提高了装饰企业的品牌形象、提升了其服务品质。</span></div>
+                <div class="s_2"><h3>高智能、精细化的装企管理专家</h3><a href="/cloudcubic_erp.html#erp" class="more">查看详情+</a></div>
+            </li>
+            <li>
+                <div class="s_1"><img src="/Themes/Home/Default/Public/images/solution2.jpg" alt="云装天下APP"><span><h1>云装天下APP</h1>是专门针对云装天下ERP搭建的移动商务平台，它不是简单的将ERP内容移动到手机端，作为云装天下ERP的有效补充和完善，云装天下APP V2.0将无法参与ERP管理和操作的最终客户、设计师、材料员、项目经理、监理、工程经理、业务员等，进行快速整合，形成完整、高效、及时的商务社交圈，是实现远程对接公司业务、项目、售前售后、施工、管理等全方位应用的高新技术移动互联网解决方案。</span></div>
+                <div class="s_2"><h3>装企的商务社交圈</h3><a href="/cloudcubic_app.html#app" class="more">查看详情+</a></div>
+            </li>
+            <li>
+                <div class="s_1"><img src="/Themes/Home/Default/Public/images/solution3.jpg" alt="高端专属服务"><span><h1>云装天下高端专属服务</h1>是针对有特殊管理或供应链需求，具备一定规模的中高端装饰企业所提供的专属制化服务，根据企业现状和意愿，提供专业的咨询管理服务，诊断企业问题并推荐更合时宜的管理体系，并根据细微末节调整和优化，助力企业实现信息化管理，最终形成独一无二的互联网+体系。</span></div>
+                <div class="s_2"><h3>ERP+APP+供应链<br/>个性化互联网生态系统</h3><a href="/High_end.html#service" class="more">查看详情+</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 装企的现状 -->
+<div class="status">
+    <h2 class="homeTitle"><strong>家装企业的现状</strong>the 6 major worries of the decoration business owners</h2>
+    <div class="statusMain grWidth">
+        <ul>
+             <li>
+                <img src="/Themes/Home/Default/Public/images/status4.jpg" alt="客户不满">
+                <div>
+                    <h3>客户不满</h3>
+                    <p class="p1">问：部门之间配合不到位，项目沟通困难，工地问题和需求难以传递，客户服务成本高，客户满意度低，公司很难树立客户口碑。</p>
+                    <p class="p2">答：云装天下【最终客户】手机端，打破了客户与装企的信息孤岛，通过与云装天下ERP的无缝对接，客户可以实时与项目负责人沟通，亲自掌控项目计划、施工、验收、评价等全部过程。</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Themes/Home/Default/Public/images/status2.jpg" alt="业务成本高">
+                <div>
+                    <h3>业务成本高</h3>
+                    <p class="p1">问：业务人员成本高，出单率低，管理难度大。与第三方平台合作，有偿获得客户源，利润低，更有可能合作不成打水漂。甚至将自己的公司变成了其他平台的项目经理，得不偿失。</p>
+                    <p class="p2">答：云装天下ERP与云装天下APP相得益彰，开创外联业务功能，装企可免费获得更多推送渠道，大大降低装企业务成本，提升业务能力。</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Themes/Home/Default/Public/images/status3.jpg" alt="老板累">
+                <div>
+                    <h3>老板累</h3>
+                    <p class="p1">问：抓项目、协调内部、把关财务，诸多难事、琐事都离不开老板的决策，随着公司规模逐步扩大，老板管理负荷也日趋加重，精力困在各种审批和协调上，吃力不见成效。</p>
+                    <p class="p2">答： 装企门店分散、业务繁多、分工复杂，亟需采用信息化管理手段，减轻管理者负担。云装天下ERP从业务到设计，再到施工、验收，系统关键节点层层把控，有效降低管理难度，大大提升管理效率。</p>
+                </div>
+            </li>
+             <li>
+                <img src="/Themes/Home/Default/Public/images/status1.jpg" alt="工地难控">
+                <div>
+                    <h3>工地难控</h3>
+                    <p class="p1">问：工地分散、情况复杂、难以掌控；项目经理和施工人员游离在监控范围之外，工期无法保障，工程质量多有偏差。</p>
+                    <p class="p2">答：云装天下【项目经理】手机端，整合装企项目资源，将项目经理统一纳入信息化管理，【工程经理】【监理】手机端，实时现场验收监督，确保项目质量。</p>
+                </div>
+            </li>
+
+            <li>
+                <img src="/Themes/Home/Default/Public/images/status5.jpg" alt="私单跑单严重">
+                <div>
+                    <h3>私单跑单严重</h3>
+                    <p class="p1">问：客户动态无法及时了解，客户跟进不及时，服务质量上不去，公司人员流动频繁，私单和跑单问题严重。</p>
+                    <p class="p2">答：云装天下ERP有效提醒跟单，客户跟单沟通全程记录，智能化跟进和回访，保证客户动态的及时准确掌控，最大程度降低跑单和私单风险，实现客户转化最大化。</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Themes/Home/Default/Public/images/status6.jpg" alt="财务糟">
+                <div>
+                    <h3>财务糟</h3>
+                    <p class="p1">问：多个项目同时进行、单个周期冗长、财务数据不及时、统计分析不到位，好像从未算清盈亏详情，决策只能靠拍脑袋。</p>
+                    <p class="p2">答：云装天下ERP实现财务节点精准控制，保证企业利益；同时可以快速自动生成财务报表，精准实时，并提供盈利自动分析功能，决策者终于能够有据可依了。</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 十大优势 -->
+<div class="odds">
+    <h2 class="homeTitle"><strong>云装天下家装管理软件系统十大优势 </strong>Cloud Cubic brings together 10 major product advantages</h2>
+    <div class="oddsMain grWidth">
+        <div class="ohbox">
+            <ul>
+                <li class="odds1">
+                    <h3>移动互联随时办公</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds1.jpg" alt="移动互联" /><span></span></a></div>
+                    <p>通过与云装天下APP的无缝对接，将公司ERP系统外的业主、项目经理、监理等有效纳入统一体系，加强沟通，移动办公。</p>
+                </li>
+                <li class="odds2">
+                    <h3>外联业务能力见长</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds2.jpg" alt="外联业务能力" /><span></span></a></div>
+                    <p>公司不再依赖于有偿购买第三方客户资源，通过云装天下ERP的有效推送，公司将大大拓展业务范围，提升外联业务能力，降低运营成本。</p>
+                </li>
+                <li class="odds3">
+                    <h3>操作简易一周上手</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds3.jpg" alt="界面简洁易懂" /><span></span></a></div>
+                    <p>软件操作界面遵从至简理念，各流程充分斟酌梳理，从用户角度出发，摒弃复杂步骤，呈现最实用、最易上手、最符合人工习惯的操作模式。</p>
+                </li>
+                <li class="odds4">
+                    <h3>施工进度同步监测</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds4.jpg" alt="施工进度体系" /><span></span></a></div>
+                    <p>项目经理施工计划和进度一目了然，实时跟进和分段、分项目机制，最大限度保证施工项目的科学管理。</p>
+                </li>
+                <li class="odds5">
+                    <h3>财务规范灵活对接</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds5.jpg" alt="傻瓜式财务系统" /><span></span></a></div>
+                    <p>傻瓜式财务设计，操作规范，思虑周全。预留了与标准财务的对接接口，系统财务数据可直接传递到专业财务软件中使用。</p>
+                </li>
+                <li class="odds6">
+                    <h3>智能报价快速管理</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds6.jpg" alt="" /><span></span></a></div>
+                    <p>可快速管理公司的定额、报价、模板，辅以严密的审核机制，保障管理万无一失。系统设定专业报价书和便捷的输出打印功能，有效提升工作效率，降低管理难度。</p>
+                </li>
+                <li class="odds7">
+                    <h3>标准化“进销存系统”</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds7.jpg" alt="" /><span></span></a></div>
+                    <p>企业项目的材料申购、订购、入库、领用、调拨、虚仓等实现标准化运作，管理思路更加清晰。</p>
+                </li>
+                <li class="odds8">
+                    <h3>报表完善有据可依</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds8.jpg" alt="" /><span></span></a></div>
+                    <p>丰富的业务、设计、财务、仓库报表帮助企业管理人员快速掌握企业的任何一个发展细节。</p>
+                </li>
+                <li class="odds9">
+                    <h3>客户跟踪促成转化</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds9.jpg" alt="" /><span></span></a></div>
+                    <p>分阶段、权限来管理客户信息，老板轻松洞察客户发展趋势，实时掌握客户跟进细节，提升客户转化率。</p>
+                </li>
+                <li class="odds10">
+                    <h3>经验加持更贴需求</h3>
+                    <div><a href="/cloudcubic_erp.html#odds"><img src="/Themes/Home/Default/Public/images/odds10.jpg" alt="" /><span></span></a></div>
+                    <p>十五年装饰行业管理经验，更懂需求细节，为装饰企业量身打造的管理软件。</p>
+                </li>
+            </ul>
+        </div>
+        <div class="pageBtn">
+            <span class="prev"><</span>
+            <span class="next">></span>
+        </div>
+        <p class="more" style="display:none"><a href="/Video.html">查看操作演示>></a></p>
+    </div>
+    </div>
+</div>
+<!-- 工装亮点 -->
+<div class="status">
+    <h2 class="homeTitle"><strong>工装亮点展示</strong>Project decoration highlights show</h2>
+    <div class="statusMain2 grWidth">
+        <ul>
+             <li>
+                <div>
+                    <h3>项目组织架构</h3>
+                    <p class="p2">工装每个项目会成立一个独立的项目部，拥有自己的组织架构，行使各自的职能和审批权限；便于项目独立管理和核算；</p>
+                     </div>
+            </li>
+            <li>
+                <div>
+                    <h3>项目独立核算</h3>
+                    <p class="p2">工装项目通常都是按项目独立核算的，因此各个项目所有的材料、人工消耗、采购、订单、领料、库存、付款、收款等都是独立的，在项目内就可以快速查看，不会被别的项目相关数据干扰；</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>专业预算体系</h3>
+                    <p class="p2">部、清、定结构，清单/定额，清单目录，人材机构成，工程量表达式，单价分析表，项目说明，取费标准，工料机汇总，标书打印……对，这就是一个堪比清华斯维尔专业程度的预算软件；</p>
+                </div>
+            </li>
+             <li>
+                <div>
+                    <h3>即时成本利润</h3>
+                    <p class="p2">由于材料，人工，机械设备，都有历史采购成本可以获得，当预算形成，就可以生成相关的计划成本，项目预算完成，就能够知道项目计划利润；</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h3>实际成本可控</h3>
+                    <p class="p2">项目实际发生的人工成本，机械设备成本，材料成本，实际领用之后，可以分摊到具体清单，从而使得成本核算精细到清单级别；当然不分滩也会自动归集到项目。从项目级别生成实际项目成本；</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>进度完工申报</h3>
+                    <p class="p2">工装项目不像家装，由装企制定收款计划表，工装项目需要按照实际完工才能申请进度款，通过完工申报，填报每个月的实际完工量，自动统计出进度款；并可生成财务收款；</p>
+                </div>
+            </li>
+             <li>
+                <div>
+                    <h3>材料人工需求</h3>
+                    <p class="p2">工料机汇总，可以汇总直接生成材料或人工申购单，直接关联生成消耗或采购领料；也可以单项按分部、清单生成材料汇总的申购单，从而满足按照实际工程进展而进行采购和领料；</p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h3>审批流程控制</h3>
+                    <p class="p2">工装项目必须各种环节设置审批流程，才能保障工作的可靠性和安全性；可以自己设置所需要的审批流程和环节；可以选择需要执行审批流程的采购或者领料任务等；</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h3>消耗实时预警</h3>
+                    <p class="p2">项目精细化过程管理，细化到控制每一项材料的消耗监控，当完工量和领用的材料出现偏差时，系统会自动预警，告诉工程管理人员，完成某项工程或者清单，造成了材料消耗超标，需要及时监管；</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 云装天下移动APP -->
+<div class="app">
+    <h2 class="title">云装天下APP</h2>
+    <ul class="appMenu">
+        <li><a href="javascript:void(0)">资讯</a></li>
+        <li><a href="javascript:void(0)">交流</a></li>
+        <li><a href="javascript:void(0)">活动</a></li>
+        <li class="on last"><a href="javascript:void(0)">我的</a></li>
+    </ul>
+    <div class="appTab grWidth">
+        <div class="appMain zx">
+            <ul>
+                <li class="z1"><h3><i></i>日记</h3><p>学习过来人的装修心得，记录自己的装修故事</p></li>
+                <li class="z2"><h3><i></i>图库</h3><p>数万张高清装修实景图，学创意，找灵感，装修不再盲目</p></li>
+                <li class="z3"><h3><i></i>新闻</h3><p>行业最新资讯，随时了解装修的主流风格、搭配</p></li>
+                <li class="z4"><h3><i></i>知识</h3><p>用户、专家之间轻松互动，快速了解家装的细节和常识</p></li>
+            </ul>
+        </div>
+        <div class="appMain jl">
+            <ul>
+                <li class="j1"><h3><i></i>联系人</h3><p>一键添加手机通讯录中的好友，也可智能添加新朋友</p></li>
+                <li class="j2"><h3><i></i>群组</h3><p>装饰公司可创建群组，与工程相关的人员保持实时沟通</p></li>
+                <li class="j3"><h3><i></i>消息</h3><p>
+                智能消息设置，随时随地，接收新的消息</p></li>
+            </ul>
+        </div>
+        <div class="appMain hd">
+            <ul>
+                <li class="h1"><h3><i></i>抢红包</h3><p>
+                每天都有新红包，登录即可领取奖励</p></li>
+                <li class="h2"><h3><i></i>抽奖</h3><p>
+                登录参与抽奖，奖品丰厚，赢奖几率高</p></li>
+                <li class="h3"><h3><i></i>签到</h3><p>签到送积分，可兑换丰厚奖励，并可用于知识问答悬赏</p></li>
+            </ul>
+        </div>
+        <div class="appMain wo">
+            <div class="ohbox">
+                <ul>
+                    <li class="w1" style="display:none"><h3><i></i>推送</h3><p>
+                    装饰公司可免费得更多有价值的信息</p></li>
+                    <li class="w2"><h3><i></i>客户</h3><p>
+                    查询客户档案，准确、快速地跟进客户</p></li>
+                    <li class="w3"><h3><i></i>项目</h3><p>
+                    我的项目、进度、验收、评分、签到、互动</p></li>
+                    <li class="w4"><h3><i></i>材料</h3><p>
+                    项目材料、材料申购、材料配送、历史申购</p></li>
+                    <li class="w5"><h3><i></i>财务</h3><p>业务提成、账户明细、项目结算等财务状态一目了然</p></li>
+                </ul>
+            </div>
+            <div class="pageBtn">
+                <span class="prev"><</span>
+                <span class="next">></span>
+            </div>
+        </div>
+    </div>
+    <p class="center"><a class="appMore" href="/cloudcubic_app.html#app">查看详情+</a></p>
+</div>
+<!-- 高端专属服务 -->
+<div class="service">
+    <h2 class="homeTitle"><strong>高端专属服务</strong>High-end exclusive service</h2>
+    <div class="serviceMain grWidth">
+        <ul>
+            <li>
+
+                <div class="serBoxOn"></div>
+                <div class="pic1 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service1.png"></div>
+                <div class="pic2 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service1_h.png"></div>
+                <div class="txt1 txt"> <a href="/High_end.html#service"><h3>量身定制：三维度信息互联</h3><p>根据企业需求，量身定制科学的信息化生态系统，不局限于ERP的单独使用，对接APP移动端辅佐企业管理，开拓线上渠道，搭建供应链平台，助力企业全方位布局信息化。</p></a></div>
+                <div class="txt2 txt"><a href="/High_end.html#service"><h3>量身定制：三维度信息互联</h3><p>根据企业需求，量身定制科学的信息化生态系统，不局限于ERP的单独使用，对接APP移动端辅佐企业管理，开拓线上渠道，搭建供应链平台，助力企业全方位布局信息化。</p></a></div>
+
+            </li>
+            <li>
+                <div class="serBoxOn"></div>
+                <div class="pic1 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service2.png"></div>
+                <div class="pic2 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service2_h.png"></div>
+                <div class="txt1 txt"><a href="/High_end.html#service"><h3>按需设计：专属信息化格局</h3><p>与企业现状对接，按需设计业务流程、需找最优系统架构，针对“内部管理、外部协作以及渠道拓展”等各类问题，按需设计企业专属的信息化格局</p></a></div>
+                <div class="txt2 txt"><a href="/High_end.html#service"><h3>按需设计：专属信息化格局</h3><p>与企业现状对接，按需设计业务流程、需找最优系统架构，针对“内部管理、外部协作以及渠道拓展”等各类问题，按需设计企业专属的信息化格局</p></a></div>
+
+            </li>
+            <li>
+
+                <div class="serBoxOn"></div>
+                <div class="pic1 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service3.png"></div>
+                <div class="pic2 s_img"><img alt="" src="/Themes/Home/Default/Public/images/service3_h.png"></div>
+                <div class="txt1 txt"><a href="/High_end.html#service"><h3>对传统装企换代升级</h3><p>传统集市+互联网有了淘宝，传统百货卖场+互联网有了京东，传统交通+互联网有了快的滴滴。搭乘互联网＋的快车，云装天下积极打造“ERP+APP+供应链”个性化互联网生态系统，助力装企全面腾飞，换代升级。</p></a></div>
+                <div class="txt2 txt"><a href="/High_end.html#service"><h3>对传统装企换代升级</h3><p>传统集市+互联网有了淘宝，传统百货卖场+互联网有了京东，传统交通+互联网有了快的滴滴。搭乘互联网＋的快车，云装天下积极打造“ERP+APP+供应链”个性化互联网生态系统，助力装企全面腾飞，换代升级。</p></a></div>
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- 案例 -->
+<div class="case" style="height:700px;">
+    <h2 class="homeTitle"><strong>家装装修行业部分案例 </strong>case</h2>
+    <div class="caseMain grWidth">
+        <div class="bd1" style="width: 20570px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+        <ul style="float: left; width: 1210px;">
+		<li class="c5" style="padding:3px;float:left"><a href="/company_news/24-739.html" loading="lazy"><img style="width: 236px;" src="/images/丛一楼装饰.jpg" alt="江西天合置业集团"></a></li>
+	
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-690.html"><img style="width: 236px;" src="/images/家博大家装.jpg" alt="家博大家装"></a></li>
+		
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1773.html"><img style="width: 236px;" src="/images/pa.png" alt="紫苹果"></a></li>
+		
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1310.html"><img style="width: 236px;" src="/images/业之峰装饰.jpg" alt="业之峰装饰"></a></li>
+		
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1774.html"><img style="width: 236px;" src="/images/yurun.png" alt="俞润装饰"></a></li>
+            
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1775.html"><img style="width: 236px;" src="https://www.cloudcubic.net/images/haier.png" alt="海尔智家" loading="lazy"></a></li>
+         		
+<li class="c5" style="padding:3px;float:left"><a href="/company_news/24-1514.html"><img style="width: 236px;" src="/images/鲁班装饰.png" alt="东莞鲁班装饰"></a></li>
+            
+<li class="c2" style="padding:3px;float:left"><a href="/company_news/24-1781.html"><img style="width: 236px;" src="/images/hzcb.png" alt="楚邦装饰"></a></li>
+    				
+<li class="c8" style="padding:3px;float:left"><a href="/company_news/24-611.html"><img style="width: 236px;" src="/images/湖南九根藤.jpg" alt="湖南九根藤装饰"></a></li>
+		        
+<li class="c1" style="padding:3px;float:left"><a href="/"><img style="width: 236px;" src="/images/东易日盛.png" alt="东易日盛"></a></li>
+		    		
+<li class="c9" style="padding:3px;float:left"><a href="/case/3-138.html"><img style="width: 236px;" src="/images/上海波涛集团.jpg" alt="上海波涛集团"></a></li>
+		    		
+<li class="c8" style="padding:3px;float:left"><a href="/case/3-93.html"><img style="width: 236px;" src="/images/蘑菇.jpg" alt="徐州蘑菇+建筑装饰"></a></li>
+		    		
+<li class="c5" style="padding:3px;float:left"><a href="/company_news/24-1476.html"><img style="width: 236px;" src="/images/南国鼎峰.png" alt="南国鼎峰装饰"></a></li>
+                    
+<li class="c4" style="padding:3px;float:left"><a href="/company_news/24-619.html"><img style="width: 236px;" src="/images/liandian.png" alt="北京联电"></a></li>
+		    		
+<li class="c3" style="padding:3px;float:left"><a href="/"><img style="width: 236px;" src="/images/志邦家居.png" alt="志邦家居"></a></li>
+		    		
+<li class="c3" style="padding:3px;float:left"><a href="/company_news/24-412.html"><img style="width: 236px;" src="/images/南昌新传奇.jpg" alt="南昌新传奇装饰"></a></li>
+				    
+<li class="c1" style="padding:3px;float:left"><a href="/company_news/24-649.html"><img style="width: 236px;" src="/images/上海金茂装饰.jpg" alt="上海金茂装饰"></a></li>
+				    
+<li class="c7" style="padding:3px;float:left"><a href="/"><img style="width: 236px;" src="/images/阔达巢艺.jpg" alt="阔达巢艺"></a></li>
+				    
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1238.html"><img style="width: 236px;" src="/images/祥和装饰.jpg" alt="祥和装饰"></a></li>
+						
+<li class="c6" style="padding:3px;float:left"><a href="/company_news/24-1760.html"><img style="width: 236px;" src="/images/faso.png" alt="梵森装饰"></a></li>	
+						
+        </ul>        
+</div>
+    </div>
+<div class="center" style="height: 60px;width: 100%;padding-top: 50px;"><a class="appMore" href="/case.html" style="color:black">查看更多+</a></div>
+</div>
+<!-- 新闻中心 -->
+<div class="news">
+    <h2 class="homeTitle"><strong>家装资讯中心</strong>Information center</h2>
+    <div class="newsMain grWidth">
+        <div class="dynamic fl">
+            <h2 class="newsTitle"><a href="/company_news.html">more ></a>公司动态</h2>
+            <img class="newsImg" src="/Themes/Home/Default/Public/images/news1.jpg" alt="公司动态">
+            <div class="newsTop">
+                <h3><a href="/company_news/24-2300.html">宏融空间设计携手云立方：装修ERP赋能品质交付的全面升级</a></h3>
+                <p>宏融空间设计对比过市面上多家同类软件，最后选择了云立方帮助我们实现公司整个装修项目全流程的管控，从前...</p>
+            </div>
+
+            <ul class="news_ul">
+                <li><span>2024-07-12</span><a href="/company_news/24-2299.html">紫蓝家居装饰集团携手云立方升级智慧ERP，打造装饰行业数字化标杆</a></li>
+                <li><span>2024-07-12</span><a href="/company_news/24-2298.html">六六家装盛典，云立方与全国头部装企齐聚深圳</a></li>
+                <li><span>2024-01-20</span><a href="/company_news/24-2244.html">“数智驱动 求实鼎新”2023云立方生态赋能会圆满举办</a></li>
+            </ul>
+        </div>
+        <div class="dynamic fl dynamic2">
+            <h2 class="newsTitle"><a href="/interior_news.html">more ></a>装修资讯 </h2>
+            <img class="newsImg" src="/Themes/Home/Default/Public/images/news2.jpg" alt="家装行业新闻">
+            <ul class="news_ul">
+            <li><span>2024-03-13</span><a href="/interior_news/25-2292.html">装修erp能够为装修公司带来哪些优势？</a></li><li><span>2024-03-13</span><a href="/interior_news/25-2291.html">来看看装修公司是如何选择装修公司管理软件...</a></li><li><span>2024-01-30</span><a href="/interior_news/25-2250.html">家装公司管理系统：高效规划装修流程</a></li><li><span>2024-01-29</span><a href="/interior_news/25-2249.html">家装ERP：解决家装管理难题</a></li><li><span>2024-01-27</span><a href="/interior_news/25-2247.html">北京装修管理软件公司，高效解决您装修管理...</a></li><li><span>2024-01-16</span><a href="/interior_news/25-2243.html">云立方装修管理软件有哪些优势？愿意选择用...</a></li>            </ul>
+        </div>
+        <div class="dynamic fr dynamic3">
+            <h2 class="newsTitle"><a href="/industry_news.html">more ></a>行业新闻</h2>
+            <img class="newsImg" src="/Themes/Home/Default/Public/images/news3.jpg" alt="行业新闻">
+            <ul class="news_ul">
+                <li><span>2024-02-25</span><a href="/industry_news/26-2290.html">装修管理系统的功能特点</a></li><li><span>2024-02-25</span><a href="/industry_news/26-2289.html">装修管理软件助力工程项目高效运营</a></li><li><span>2024-02-25</span><a href="/industry_news/26-2288.html">装修管理软件厂家推荐</a></li><li><span>2024-02-25</span><a href="/industry_news/26-2287.html">装修公司管理系统：高效规划改造流程</a></li><li><span>2024-02-25</span><a href="/industry_news/26-2286.html">装修公司管理软件解决方案</a></li><li><span>2024-02-23</span><a href="/industry_news/26-2285.html">装修公司管理软件：高效管理装修项目与资源</a></li>            </ul>
+        </div>
+    </div>
+</div>
+<!-- 申请试用 -->
+<div class="apply">
+    <h2 class="homeTitle"><strong>申请试用 </strong>To obtain trial account</h2>
+    <div class="applyMain grWidth">
+        <form action="/feedback/insert.html" class="applyForm" method="post">
+        <input type="hidden" name="lang" value="1">
+            <div class="left fl">
+                <p class="a1"><label for="">企业名称:</label>
+                <input type="text" name="title"><i>*</i></p>
+                <p class="a2"><label for="">联系手机:</label><input type="text" name="tel"><i>*</i></p>
+                <p class="a3"><label for="">联系邮箱:</label><input type="text" name="email"><i>*</i></p>
+                <p class="a4"><label for="">联系人:</label><input type="text" name="uname"><i>*</i></p>
+                <p class="a5">
+                    <label for="">验证码:</label>
+                    <input type="text" name="verifyCode" value="" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}">
+                    <img id="verifyImage" class="checkcode" align="absmiddle" title="Click the refresh verification code" onclick="javascript:resetVerifyCode(this);" src="/index.php?m=index&a=verify">
+                </p>
+                <input class="sub" type="submit" value="立即申请">
+            </div>
+            <div class="right fr">
+                <h3>装饰企业的问题：</h3>
+                <div class="check">
+                    <label><input name="question[]" type="checkbox" value="1" />管理层每天工作都很忙，而员工却很休闲。 </label>
+                    <label><input name="question[]" type="checkbox" value="2" />设计部图纸和预算管理混乱，签单率老是上不去。 </label>
+                    <label><input name="question[]" type="checkbox" value="3" />工程进度管理不到位，客户和公司都不满意？</label>
+                    <label><input name="question[]" type="checkbox" value="4" />公司各类审批流程多，审批周期很长、效率不高？ </label>
+                    <label><input name="question[]" type="checkbox" value="5" />业务管理混乱，不知道客户每天跟踪的情况。</label>
+                    <label><input name="question[]" type="checkbox" value="6" />营销分析数据欠缺，又没有办法增加人员来做数据统计？</label>
+                    <label><input name="question[]" type="checkbox" value="7" />每个月业务也做了不少，赚了多少钱不知道?</label>
+                    <label><input name="question[]" type="checkbox" value="8" />材料采购和结算的帐不清楚，成本浪费很大？</label>
+                </div>
+                <textarea name="content" id="" cols="30" rows="10" ></textarea>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <!-- 底部 -->
+    <div class="clearfix"></div>
+    <div class="footMemu">
+        <a href="/">首页</a>
+        |<a href="/cloudcubic.html">方案</a>|<a href="/support.html">支持</a>|<a href="/case.html">案例</a>|<a href="/about.html">关于</a>    </div>
+    <div class="footer">
+        <div class="grWidth">
+            <div class="footTop">
+                <div class="left fl">
+                    地址：深圳市南山区深圳湾科技生态园9栋A3座534-536<br />
+                    邮编：518000<br />
+                    邮箱：Sales@cloudcubic.net<br />
+                    网址：http://www.cloudcubic.net                </div>
+                <div class="footPhone fl">
+                    <p class="p1 fl">全国免费服务电话<span>400-8266-778</span></p>
+                </div>
+                <div class="right fr">
+                    <div class="footIcon fl">
+                        <p>关注云立方微信公众号及微博</p>
+                        <div>
+                            <a class="a1" href="tencent://message/?uin=" title="QQ"></a>
+                            <a class="a2" href="javascript:void(0);" title="微信"><span><img src="/Uploads/201512/5670dc2db77bc.jpg" alt="扫一扫关注我们" /></span></a>
+                            <a class="a3" href="http://weibo.com" title="新浪微博" rel="nofollow"></a>
+                            <a class="a4" href="http://t.qq.com/" title="腾讯微博" rel="nofollow"></a>
+                        </div>
+                    </div>
+                    <img class="fr" src="/Uploads/201511/564afb02d8854.jpg" alt="关注我们" width="85" height="85" />
+                </div>
+            </div>
+            <div class="footCopy">
+                ©Copyright 2015 Shenzhen Cloud Cubic Network Co.,Ltd                <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">粤ICP备14093298号</a></span>
+                <span class="sp02">
+                    <a href="/Law.html">法律声明</a>
+                    <a href="/Privacy_clause.html">隐私条款</a>
+                    <a href="/knowledge.html">知识产权</a>
+                </span>
+            </div>
+                        <div class="firendLink">
+                <strong>友情链接：</strong>
+                                    <a href="http://temai.mei-lady.com" target="_blank">淘特卖</a>                    <em> |  </em>                    <a href="http://www.xuntelift.cn" target="_blank">液压式升降平台</a>                    <em> |  </em>                    <a href="http://www.hnhhlqt.com" target="_blank">玻璃钢冷却塔</a>                    <em> |  </em>                    <a href="http://www.sikaigongju.com" target="_blank">防爆工具</a>                    <em> |  </em>                    <a href="http://www.kingnuohao.com" target="_blank">直线电机</a>                    <em> |  </em>                    <a href="https://www.dgyingyuan.com" target="_blank">纯水设备</a>                    <em> |  </em>                    <a href="http://www.wfstfj.com" target="_blank">北京西山风机厂</a>                    <em> |  </em>                    <a href="http://www.jinzunjixie.com" target="_blank">淘金设备厂家</a>                    <em> |  </em>                    <a href="http://www.zbyctxsb.com" target="_blank">脱硫脱硝</a>                    <em> |  </em>                    <a href="http://www.ifang1.com" target="_blank">深圳小产权房</a>                    <em> |  </em>                    <a href="https://www.xnyzf.cn" target="_blank">西宁装修</a>                    <em> |  </em>                    <a href="http://36001.cn" target="_blank">百度开户</a>                    <em> |  </em>                    <a href="http://xingzhuangwang.com/ " target="_blank">邢台装修公司</a>                    <em> |  </em>                    <a href="http://www.mrzlz.com" target="_blank">蓦然资料站</a>                    <em> |  </em>                    <a href="http://www.adshm.com" target="_blank">成都广告制作</a>                    <em> |  </em>                    <a href="https://www.seochina.cc" target="_blank">SEO</a>                    <em> |  </em>                    <a href="https://www.xazhw.cn" target="_blank">西安做网站</a>                    <em> |  </em>                    <a href="http://www.shyingkewang.com" target="_blank">上海网站优化</a>                    <em> |  </em>                    <a href="https://www.cdtlk.com" target="_blank">成都网站建设</a>                    <em> |  </em>                    <a href="http://www.lyxhkj.com" target="_blank">洛阳网络公司</a>            </div>
+                    </div>
+    </div>
+    <!--侧边悬浮-->
+    <div class="quickMenuwrap">
+        <ul class="list">
+            <li class="itemQm itemConsult">
+                <a class="iconWrap"><i class="icon"></i>咨询</a>
+                <div class="itemHideWrap itemConsultWrap">
+                    <strong class="title">客服中心</strong>
+                    <ul class="innerList">
+                        <li class="innerltem">
+                            <span class="label">服务热线：</span>
+                            &nbsp;&nbsp;400-8266-778                        </li>
+                        <li class="innerltem">
+                            <span class="label">售后热线：</span>
+                            &nbsp;&nbsp;400-8266-778                        </li>
+                        <li class="innerltem">
+                            <span class="label">服务邮箱：</span>
+                            <a class="link" href="mailto:Sales@cloudcubic.net">Sales@cloudcubic.net</a>
+                        </li>
+                    </ul>
+                    <div class="kefuWrap">
+                        <a href="tencent://message/?uin=2851759207" target="_blank" class="linkWrap"><img src="/Themes/Home/Default/Public/images/icon-quick-qq.png" alt="" class="cover" />售前服务</a>
+                        <a href="tencent://message/?uin=2851759208" target="_blank" class="linkWrap"><img src="/Themes/Home/Default/Public/images/icon-quick-qq.png" alt="" class="cover" />售后服务</a>
+                    </div>
+                </div>
+            </li>
+            <li class="itemQm itemNeed"><a href="javascript:showDiv()" class="iconWrap"><i class="icon"></i>试用</a></li>
+            <li class="itemQm itemWeixin">
+                <a class="iconWrap"><i class="icon"></i>公众号</a>
+                <div class="itemHideWrap itemWeixinWrap">
+                    <img src="/Themes/Home/Default/Public/images/quick-menu-weixin.png" alt="" class="cover" />
+                </div>
+            </li>
+            <li class="itemQm itemTop"><a id="goTop" href="javascript:;" class="iconWrap"><i class="icon"></i>TOP</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $(".itemQm").hover(function () {
+                $(this).children('div').toggle();
+            })
+            $('#goTop').click(function () {
+                $("html,body").animate({ scrollTop: 0 }, 500);
+            })
+        })
+        function showDiv() {
+            document.getElementById('popDiv').style.display = 'block';
+            document.getElementById('bg').style.display = 'block';
+        }
+        function closeDiv() {
+            document.getElementById('popDiv').style.display = 'none';
+            document.getElementById('bg').style.display = 'none';
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        //var _mvq = window._mvq || [];
+        //window._mvq = _mvq;
+        //_mvq.push(['$setAccount', 'm-227449-0']);
+
+        //_mvq.push(['$setGeneral', '', '', /*用户名*/ '', /*用户id*/ '']);//如果不传用户名、用户id，此句可以删掉
+        //_mvq.push(['$logConversion']);
+        //(function () {
+        //    var mvl = document.createElement('script');
+        //    mvl.type = 'text/javascript'; mvl.async = true;
+        //    mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+        //    var s = document.getElementsByTagName('script')[0];
+        //    s.parentNode.insertBefore(mvl, s);
+        //})();
+
+    </script>
+
+    <div id="bg" class="popupBg" style="display: none;"></div>
+    <div id="popDiv" class="popupWrap" style="display: none;">
+        <a class="btnClose" href="javascript:closeDiv()"></a>
+        <div class="popupHeader">
+            <h2 class="title">在线申请试用  <span class="label">(<font color="red">*</font>为必填项 )</span></h2>
+        </div>
+        <div class="popupContent">
+            <form action="/feedback/insert.html" class="applyForm" method="post">
+                <input type="hidden" name="lang" value="1" />
+                <input name="verify_status" value="0" type="hidden" />
+                <p class="formGroup twoFormGroup">
+                    <span class="label"><font color="red">*</font>企业名称:</span><input class="inputText inputCompany titleinput" type="text" placeholder="企业名称" name="title" />
+                    <span class="label"><font color="red">*</font>联系手机:</span><input class="inputText inputCompany telinput" type="text" placeholder="联系手机" name="tel" maxlength="11" />
+                </p>
+                <p class="formGroup twoFormGroup">
+                    <span class="label"><font color="red">*</font>联系邮箱:</span><input class="inputText inputCompany emailinput" type="text" placeholder="联系邮箱" name="email" />
+                    <span class="label"><font color="red">*</font>联系人:</span><input class="inputText inputCompany unameinput" type="text" placeholder="联系人" name="uname" />
+                </p>
+                <div class="formGroup">
+                    <span class="label">装饰企业的问题：</span>
+                    <ul class="selectWrap">
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="1" />管理层每天工作都很忙，而员工却很休闲。 </li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="2" />设计部图纸和预算管理混乱，签单率老是上不去。 </li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="3" />工程进度管理不到位，客户和公司都不满意？</li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="4" />公司各类审批流程多，审批周期很长、效率不高？ </li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="5" />业务管理混乱，不知道客户每天跟踪的情况。</li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="6" />营销分析数据欠缺，又没有办法增加人员来做数据统计？ </li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="7" />每个月业务也做了不少，赚了多少钱不知道?</li>
+                        <li class="item"><input class="inputCheckbox" name="question[]" type="checkbox" value="8" />材料采购和结算的帐不清楚，成本浪费很大？ </li>
+                    </ul>
+                </div>
+                <p class="formGroup a5" style="display:none">
+                    <label for="">验证码:</label>
+                    <input type="text" name="verifyCode" value="" onFocus="this.value=''" onBlur="if(!value){value=defaultValue;}" />
+                    <img id="verifyImage2" class="checkcode" align="absmiddle" title="Click the refresh verification code" onclick="javascript:resetVerifyCode(this);" src="/index.php?m=index&a=verify" />
+                </p>
+                <div class="submitBar">
+                    <button class="btnSubmit" type="submit">提交</button>
+                    <button class="btnReset" type="reset">重置</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        //微信
+        $(function () {
+	$(".btnSubmit").click(function (e){
+		if($(".titleinput").val() == ''){alert('请输入企业名称！');return false;}
+		if($(".telinput").val() == ''){alert('请输入联系手机！');return false;}
+		if($(".emailinput").val() == ''){alert('请输入联系邮箱！');return false;}
+		if($(".unameinput").val() == ''){alert('请输入联系人名称！');return false;}
+		var rem = /^[\w\-\.]+@[a-z0-9]+(\-[a-z0-9]+)?(\.[a-z0-9]+(\-[a-z0-9]+)?)*\.[a-z]{2,4}$/i;
+		if(!rem.test($(".emailinput").val())){alert('联系邮箱格式不正确！');return false;}
+	});
+            $('.footIcon .a2').hover(function () {
+                $(this).children('span').stop().toggle(300);
+            });
+        });
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?29de95334493cfb87706e7776db95dde";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="/Public/js/yzh.js"></script>
+    <script src="/js/XYHjax.js"></script>
+    <script>
+        if (GetQueryString("bd_vid")) {
+            setCookie("bd_vid", GetQueryString("bd_vid"))
+        }
+        function GetQueryString(name) {
+
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+
+        }
+
+        function setCookie(name, value) {
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+        }
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+    </script>
+    
+  <script src="/Themes/Home/Default/Public/js/scrollReveal.js"></script>
+<script type="text/javascript">
+    /* 十大优势 */
+    jQuery(".oddsMain").slide({ mainCell:".ohbox ul", effect:"leftLoop",vis:5, scroll:5,autoPage:true,autoPlay:false});
+    /* 云装天下移动APP TAB切换 */
+    jQuery(".app").slide({ titCell:".appMenu li", mainCell:".appTab",delayTime:0,prevCell:false,nextCell:false});
+    /* 云装天下移动APP滚动 */
+    jQuery(".appTab .wo").slide({ mainCell:".ohbox ul", effect:"leftLoop", delayTime:800,vis:4,scroll:1,easing:"easeOutCubic"});
+    /* 案例滚动*/
+    jQuery(".caseMain").slide({ mainCell:".bd", effect:"left",easing:"easeOutCirc"});
+
+    //解决安案
+    $(function(){
+        $('.solutionMain li').hover(function(){
+            $(this).children('.s_1').children('span').stop().animate({bottom:0},600)
+        },function(){
+            $(this).children('.s_1').children('span').stop().animate({bottom:'-300px'},600)
+        })
+    //高端专属服务
+        $(".serviceMain li").hover(
+          function () {
+             $(this).children().stop(false,true);
+             $(this).children(".serBoxOn").fadeIn();
+             $(this).children(".pic1").animate({right: -375},400);
+             $(this).children(".pic2").animate({left: 0},400);
+             $(this).children(".txt1").animate({left: -375},400);
+             $(this).children(".txt2").animate({right: 0},400);
+             },
+
+          function () {
+             $(this).children().stop(false,true);
+             $(this).children(".serBoxOn").fadeOut( );
+             $(this).children(".pic1").animate({right: 0},400);
+             $(this).children(".pic2").animate({left: -375},400);
+             $(this).children(".txt1").animate({left: 0},400);
+             $(this).children(".txt2").animate({right: -375},400);
+          }
+        );
+    })
+    //初始动画
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+            (function(){
+            window.scrollReveal = new scrollReveal({reset: false});
+        })();
+    };
+</script>
+
+<script>
+(function(b,a,e,h,f,c,g,s){b[h]=b[h]||function(){(b[h].c=b[h].c||[]).push(arguments)};
+b[h].s=!!c;g=a.getElementsByTagName(e)[0];s=a.createElement(e);
+s.src="//s.union.360.cn/"+f+".js";s.defer=!0;s.async=!0;g.parentNode.insertBefore(s,g)
+})(window,document,"script","_qha",174342,false);
+</script>
 </body>
 </html>
