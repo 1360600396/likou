@@ -244,7 +244,7 @@ function remove(arr){
   let j=0
   for(let i=0;i<arr.length;i++){
     if(arr[i]!=0){
-      arr[j]=arr[i]
+      arr[j]=arr[i] 
       j++
     }
   }
@@ -755,20 +755,22 @@ function find1(){
 // }
 // console.log(replace([1,2,3]))
 
-function split(s){
-  return s.replace(/(?=(\d{4})+$)/g,'-')
-}
+// function split(s){
+//   return s.replace(/(?=(\d{4})+$)/g,'-')
+// }
 
-console.log(split('123456789'))
+// console.log(split('123456789'))
 
-function compose(...fn){
-  return function dfs(args){
-      for(let i=0;i<fn.length;i++){
-        args=fn[i](args)
-      }
-      return args
-  }
+// function compose(...fn){
+//   return function dfs(args){
+//       for(let i=0;i<fn.length;i++){
+//         args=fn[i](args)
+//       }
+//       return args
+//   }
   
-}
+// }
 
-new RegExp()
+// let str='123 123 123'
+// let arr12=str.split(' ')
+

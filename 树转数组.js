@@ -98,15 +98,15 @@ function treeToArray2(node,parentId=null){
 
 
 
-const treeToArr =(tree,parent=0)=>{
-  let res=[]
-  res.push({id:tree.id,name:tree.name,parent})
-  tree.children.forEach(item=>{
-    res.push(...treeToArr(item,item.id))
+// const treeToArr =(tree,parent=0)=>{
+//   let res=[]
+//   res.push({id:tree.id,name:tree.name,parent})
+//   tree.children.forEach(item=>{
+//     res.push(...treeToArr(item,item.id))
 
-  })
-  return res
-}
+//   })
+//   return res
+// }
 
 
 

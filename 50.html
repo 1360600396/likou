@@ -4,16 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+.box2 {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+}
+p{
+  color: red;
+}
+.box2 p{
+  color: blue;
+}
+#box3 {
+  color: yellow !important;
+}
+  </style>
 </head>
 <body>
-  <head></head>
-  <nav></nav>
-  <section></section>
-  <article></article>
-  <footer></footer>
-  <aside></aside>
-  <input type="email" name="" id="">
-  <input type="url" name="" id="">
-  <input type="date" name="" id="">
+<div class="box1">
+
+  <div class="box2" >
+    <p id="box3" style="color: coral;">12312</p>
+  </div>
+</div>
 </body>
 </html>
